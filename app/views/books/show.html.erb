@@ -1,0 +1,17 @@
+
+<div class="flash-notifications">
+  <% flash.each do |key, value| %>
+   <%= content_tag(:div, value, class: key) %>
+  <% end %>
+ </div>
+ <div class="title">
+  <h4 class="title2">Title:</h4> 
+  <p class="p1"><%= @book.title %></p>
+ </div>
+
+<div class="body">
+    <h4 class="body2">body:</h4> 
+    <p class="p2"><%= @book.body %></p>
+    </div>
+
+<div class="botn"><%= link_to "Edit", edit_book_path(@book.id) %>  |  <%= link_to "Back", books_path %></div>
